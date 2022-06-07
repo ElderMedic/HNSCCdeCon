@@ -20,7 +20,16 @@ import pandas as pd
 import qgrid
 from matplotlib import pyplot as plt
 import seaborn as sns
+import logging
 
+# logging  
+#LOG = "/home/cke/runBLADE.log"                                                     
+#logging.basicConfig(filename=LOG, filemode="w", level=logging.DEBUG,format='%(asctime)s %(message)s', datefmt='%d/%m/%Y %H:%M:%S')  
+
+# console handler  
+#console = logging.StreamHandler()  
+#console.setLevel(logging.ERROR)  
+#logging.getLogger("").addHandler(console)
 
 # ### Run BLADE with TCGA bulk and Puram scRNA-seq reference
 # 
@@ -53,11 +62,13 @@ hyperpars = {
 
 Nrep=3
 Nrepfinal=10
-Njob=10
+Njob=20
 
 
 # In[10]:
 
+# read in marker genes, highly variable and top 100 DEGs for each cell type
+marker_genes = pd.read_csv("/home/cke/Puram/top100DEGs.txt",header=None).iloc[0,:]
 
 # df_Puram_std = pd.read_csv("/home/cke/Puram/HNSCC2PuramGSE103322_HNSCC_exp_std.tsv",sep='\t',index_col=0)
 # df_Puram_mean = pd.read_csv("/home/cke/Puram/HNSCC2PuramGSE103322_HNSCC_exp_mean.tsv",sep='\t',index_col=0)
@@ -66,11 +77,14 @@ Njob=10
 df_Puram_std = pd.read_csv("/home/cke/Puram/HNSCC2PuramGSE103322_HNSCC_exp_std_simple.tsv",sep='\t',index_col=0)
 df_Puram_mean = pd.read_csv("/home/cke/Puram/HNSCC2PuramGSE103322_HNSCC_exp_mean_simple.tsv",sep='\t',index_col=0)
 
+df_Puram_std_filtered = df_Puram_std.loc[marker_genes,:]
+df_Puram_mean_filtered = df_Puram_mean.loc[marker_genes,:]
+
 df_TCGA = pd.read_csv("/home/cke/TCGA-HNSC.htseq_counts_exp2.tsv",sep='\t',index_col=0)
+df_Puram_mean_log2 = np.log2(df_Puram_mean_filtered+1)
 
-
-merge_genes_mean = pd.merge(df_Puram_mean,df_TCGA,left_index=True,right_index=True,how='inner')
-merge_genes_std = pd.merge(df_Puram_std,df_TCGA,left_index=True,right_index=True,how='inner')
+merge_genes_mean = pd.merge(df_Puram_mean_log2,df_TCGA,left_index=True,right_index=True,how='inner')
+merge_genes_std = pd.merge(df_Puram_std_filtered,df_TCGA,left_index=True,right_index=True,how='inner')
 
 print("Get mean and std exp!")
 
@@ -85,6 +99,9 @@ df_shared_mean = merge_genes_mean.iloc[:,:10]
 df_shared_std = merge_genes_std.iloc[:,:10]
 
 print("Get common genes! ",df_shared_mean.shape[0])
+print("cell types: ",df_shared_mean.shape[1])
+print("bulk samples: ",df_TCGA_shared.shape[1])
+
 
 # Given the configuration above, BLADE is applied to each of the simulation dataset created previously.  
 # 
@@ -103,16 +120,17 @@ print("Get common genes! ",df_shared_mean.shape[0])
 # - nsample = 546
 # 
 # simple tumor type setup:
-# - ngenes = 21706 common genes
-# - ncells = 10, all tumor types are merged
-# - nsample = 546
+#- ngenes = 21706 common genes
+#- ncells = 10, all tumor types are merged, including one NA type?
+#- nsample = 546
+# - marker genes = 900 (including 9 genes not shared)
 
 print("start BLADE!")
 Y = df_TCGA_shared.to_numpy()
-mean = np.log(df_shared_mean).to_numpy() #highly suspect if log transform should be done here
-sd = df_shared_std.to_numpy()
+mean = df_shared_mean.to_numpy() 
+sd = df_shared_std.to_numpy() 
 
-outfile = './BLADE/data/PuramTCGA_BLADEout.pickle'
+outfile = './BLADE/data/Puramfiltered_TCGA_BLADEout.pickle'
 
 final_obj, best_obj, best_set, outs = Framework(
     mean, sd, Y,
