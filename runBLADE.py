@@ -67,8 +67,8 @@ Njob=20
 
 # In[10]:
 
-# read in marker genes, highly variable and top 100 DEGs for each cell type
-marker_genes = pd.read_csv("/home/cke/Puram/top100DEGs.txt",header=None).iloc[0,:]
+# read in marker genes
+marker_genes = pd.read_csv("/home/cke/Puram/top100markers_de_cor.txt",header=None).iloc[0,:]
 
 # df_Puram_std = pd.read_csv("/home/cke/Puram/HNSCC2PuramGSE103322_HNSCC_exp_std.tsv",sep='\t',index_col=0)
 # df_Puram_mean = pd.read_csv("/home/cke/Puram/HNSCC2PuramGSE103322_HNSCC_exp_mean.tsv",sep='\t',index_col=0)
@@ -130,7 +130,7 @@ Y = df_TCGA_shared.to_numpy()
 mean = df_shared_mean.to_numpy() 
 sd = df_shared_std.to_numpy() 
 
-outfile = './BLADE/data/Puramfiltered_TCGA_BLADEout.pickle'
+outfile = './BLADE/data/Puramfiltered_TCGA_corDEmarkers_BLADEout.pickle'
 
 final_obj, best_obj, best_set, outs = Framework(
     mean, sd, Y,

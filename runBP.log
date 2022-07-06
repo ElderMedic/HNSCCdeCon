@@ -1,0 +1,74 @@
+nohup: ignoring input
+Loading required package: snowfall
+Loading required package: snow
+Warning message:
+replacing previous import ‘gplots::lowess’ by ‘stats::lowess’ when loading ‘TED’ 
+Read 900 items
+[1] "EMSEMBLE IDs detected. Cleaning up genes based on EMSEMBLE IDs."
+A total of  44  genes from RB chrM chrX chrY  have been excluded 
+A total of  0  lowly expressed genes have been excluded 
+[1] "removing non-numeric genes..."
+[1] "removing outlier genes..."
+Number of outlier genes filtered= 7 
+[1] "aligning reference and mixture..."
+[1] "run first sampling"
+Start run... This may take a while 
+R Version:  R version 4.1.3 (2022-03-10) 
+
+snowfall 1.84-6.1 initialized (using snow 0.4-4): parallel execution on 20 CPUs.
+
+
+Stopping cluster
+
+[1] "merge subtypes"
+        Fibroblast tumor B cell myocyte       Macrophage Endothelial T cell
+Min.         0.000 0.000  0.000   0.000 0.000      0.000       0.000  0.000
+1st Qu.      0.016 0.738  0.000   0.000 0.000      0.006       0.001  0.000
+Median       0.060 0.872  0.000   0.000 0.000      0.018       0.005  0.000
+Mean         0.100 0.809  0.001   0.023 0.014      0.035       0.011  0.003
+3rd Qu.      0.143 0.949  0.000   0.007 0.000      0.046       0.013  0.000
+Max.         0.966 1.000  0.030   0.810 0.860      0.402       0.125  0.096
+        Dendritic  Mast
+Min.        0.000 0.000
+1st Qu.     0.000 0.000
+Median      0.000 0.001
+Mean        0.002 0.001
+3rd Qu.     0.000 0.002
+Max.        0.154 0.022
+[1] "pooling information across samples"
+Start optimization... This may take a while 
+snowfall 1.84-6.1 initialized (using snow 0.4-4): parallel execution on 20 CPUs.
+
+
+Stopping cluster
+
+[1] "run final sampling"
+Start run... This may take a while 
+snowfall 1.84-6.1 initialized (using snow 0.4-4): parallel execution on 20 CPUs.
+
+
+Stopping cluster
+
+        tumor Fibroblast B cell myocyte       Macrophage Endothelial T cell
+Min.    0.010      0.000  0.000   0.000 0.000      0.000       0.000  0.000
+1st Qu. 0.790      0.011  0.000   0.000 0.000      0.005       0.002  0.000
+Median  0.897      0.046  0.000   0.000 0.000      0.016       0.006  0.000
+Mean    0.845      0.078  0.001   0.021 0.010      0.029       0.010  0.004
+3rd Qu. 0.957      0.104  0.001   0.006 0.000      0.039       0.012  0.002
+Max.    0.999      0.857  0.036   0.821 0.915      0.232       0.101  0.099
+        Dendritic  Mast
+Min.        0.000 0.000
+1st Qu.     0.000 0.000
+Median      0.000 0.001
+Mean        0.003 0.001
+3rd Qu.     0.000 0.002
+Max.        0.164 0.015
+[1] "vst transformation is feasible"
+converting counts to integer mode
+Warning messages:
+1: In searchCommandline(parallel, cpus = cpus, type = type, socketHosts = socketHosts,  :
+  Unknown option on commandline: --file
+2: In searchCommandline(parallel, cpus = cpus, type = type, socketHosts = socketHosts,  :
+  Unknown option on commandline: --file
+3: In searchCommandline(parallel, cpus = cpus, type = type, socketHosts = socketHosts,  :
+  Unknown option on commandline: --file

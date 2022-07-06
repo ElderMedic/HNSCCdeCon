@@ -1,0 +1,14 @@
+nohup: ignoring input
+[Parallel(n_jobs=20)]: Using backend LokyBackend with 20 concurrent workers.
+Get mean and std exp!
+Get common genes!  1000
+cell types:  10
+bulk samples:  17
+start BLADE!
+all of 1000 genes are used for optimization.
+All samples are used during the optimization.
+Initialization with Support vector regression
+/home/cke/miniconda3/envs/BLADE/lib/python3.10/site-packages/joblib/externals/loky/backend/resource_tracker.py:318: UserWarning: resource_tracker: There appear to be 23 leaked semlock objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+/home/cke/miniconda3/envs/BLADE/lib/python3.10/site-packages/joblib/externals/loky/backend/resource_tracker.py:318: UserWarning: resource_tracker: There appear to be 2 leaked folder objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
