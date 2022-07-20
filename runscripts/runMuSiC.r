@@ -62,7 +62,7 @@ run_MuSiC <- function(df_Puram_filtered,df_bulk,label){
 }
 
 if (path_marker!='noFS'){
-    df_Puram_filtered <- Get_filtered_df(marker_genes,df_Puram,FS_setup,path_signature_out)
+    df_Puram_filtered <- subset(df_Puram, row.names(df_Puram) %in% marker_genes)
 } else {
     df_Puram_filtered <- df_Puram
 }
