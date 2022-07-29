@@ -1,5 +1,5 @@
 #!/usr/bin/Rscript
-library(TED)
+library(TED,quietly = T)
 
 args = commandArgs(trailingOnly=TRUE)
 print("running BayesPrism with following args:")
@@ -48,7 +48,7 @@ run_BP <- function(df_Puram_filtered,df_bulk,label,label_subtype){
     ref.data.filtered <- cleanup.genes(ref.dat=data.matrix(df_Puram_filtered), gene.type=c("RB","chrM","chrX","chrY"), species="hs", input.type="scRNA",exp.cells=5)
     #run BayesPrism main func
     res <- run.Ted(ref.dat=ref.data.filtered, X=df_bulk,cell.type.labels=label$cell_category,cell.subtype.labels=label_subtype$cell_category,
-        tum.key='tumor',input.type="scRNA",n.cores=10,pdf.name="PuramPseudobulkRaw")
+        tum.key='tumor',input.type="scRNA",n.cores=10)
     return(res)
 }
 

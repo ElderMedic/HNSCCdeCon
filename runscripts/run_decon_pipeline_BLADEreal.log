@@ -1,0 +1,24 @@
+scanpy==1.9.1 anndata==0.8.0 umap==0.5.3 numpy==1.21.5 scipy==1.8.0 pandas==1.4.2 scikit-learn==1.0.2 statsmodels==0.13.2 python-igraph==0.9.9 louvain==0.7.1 pynndescent==0.5.7
+BLADEreal_Jul29  - pipeline initiated! Welcome, contact author for support: kechanglin1998@hotmail.com
+2022-07-29 14:41:01
+running Feature selection!
+real mode: now with feature selection setup:  top100markers
+2022-07-29 14:42:49
+real mode: now with feature selection setup:  top20markers
+2022-07-29 14:43:19
+real mode: now with feature selection setup:  top100DEGs
+2022-07-29 14:43:49
+real mode: now with feature selection setup:  top50markers
+2022-07-29 14:44:19
+now running in cmd:  python /home/cke/runscripts/runBLADE.py /home/cke/Real/InputToWrapper/real_std.tsv /home/cke/Real/InputToWrapper/real_mean.tsv /home/cke/TCGA-HNSC.htseq_counts_exp2_symbol_samplexgene.tsv /home/cke/Real/TCGAResults/BLADE/ --folder_marker /home/cke/Puram/markers/ --name BLADEreal_Jul29_real &
+job finished! details of arguments used in this run:  Namespace(path_adata='/home/cke/Puram/Puram_scanpy.h5ad', mode='real', out='/home/cke/Real/InputToWrapper/', out_res='/home/cke/Real/TCGAResults/', path_label='/home/cke/Puram/scRNAlabels/', path_bulk='/home/cke/TCGA-HNSC.htseq_counts_exp2_symbol_samplexgene.tsv', folder_marker='/home/cke/Puram/markers/', name='BLADEreal_Jul29', methods='[BLADE]', keyword=['top', 'marker', 'DEG'])
+now with feature selection setup:  top100markers
+Get mean and std exp!
+Get common genes!  830
+cell types:  10
+bulk samples:  546
+start BLADE!
+all of 830 genes are used for optimization.
+All samples are used during the optimization.
+Initialization with Support vector regression
+No feature filtering is done (fsel = 0)

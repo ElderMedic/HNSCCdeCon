@@ -117,7 +117,7 @@ def main(path_std,path_mean,path_bulk,path_out,folder_marker=False,name="unnamed
 
     Nrep=3
     Nrepfinal=10
-    Njob=10
+    Njob=20
     
     if folder_marker:
         list_markers = getloclist(folder_marker,keyword)
@@ -126,7 +126,7 @@ def main(path_std,path_mean,path_bulk,path_out,folder_marker=False,name="unnamed
             marker_genes =  pd.read_csv(marker_file,header=None).iloc[0,:]
             dict_FS[os.path.split(marker_file)[1].split("_")[0]] = marker_genes
 
-        for FS_setup, marker_genes in dict_FS.items():
+        for FS_setup, marker_genes in tqdm(dict_FS.items()):
             print("now with feature selection setup: ",FS_setup)
             df_bulk_shared, df_shared_mean, df_shared_std = run_BLADE(marker_genes, df_Puram_std, df_Puram_mean, df_bulk)
             print("start BLADE!")
@@ -172,7 +172,7 @@ def main(path_std,path_mean,path_bulk,path_out,folder_marker=False,name="unnamed
             }, open(outfile, 'wb')
             )
         print("export to: ",outfile)
-        filtered_celltypefrac_BLADE = get_result(final_obj,df_bulk_shared,df_shared_mean,name,path_out)
+        filtered_celltypefrac_BLADE = get_result(final_obj,df_bulk_shared,df_shared_mean,path_out,name)
         
 
 

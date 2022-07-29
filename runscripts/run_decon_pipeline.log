@@ -1,0 +1,752 @@
+scanpy==1.9.1 anndata==0.8.0 umap==0.5.3 numpy==1.21.5 scipy==1.8.0 pandas==1.4.2 scikit-learn==1.0.2 statsmodels==0.13.2 python-igraph==0.9.9 louvain==0.7.1 pynndescent==0.5.7
+fullpipeline_Jul29_noFS  - pipeline initiated! Welcome, contact author for support: kechanglin1998@hotmail.com
+2022-07-29 00:46:18
+no Feature selection!
+LOT TRAIN: [1 2 3 4 5 6 7 8] TEST: [0]
+Leaving out:  6
+LOT TRAIN: [0 2 3 4 5 6 7 8] TEST: [1]
+Leaving out:  16
+LOT TRAIN: [0 1 3 4 5 6 7 8] TEST: [2]
+Leaving out:  17
+LOT TRAIN: [0 1 2 4 5 6 7 8] TEST: [3]
+Leaving out:  18
+LOT TRAIN: [0 1 2 3 5 6 7 8] TEST: [4]
+Leaving out:  20
+LOT TRAIN: [0 1 2 3 4 6 7 8] TEST: [5]
+Leaving out:  22
+LOT TRAIN: [0 1 2 3 4 5 7 8] TEST: [6]
+Leaving out:  25
+LOT TRAIN: [0 1 2 3 4 5 6 8] TEST: [7]
+Leaving out:  26
+LOT TRAIN: [0 1 2 3 4 5 6 7] TEST: [8]
+Leaving out:  28
+LOT TRAIN: [1 2 3 4 5 6 7 8] TEST: [0]
+Leaving out:  6
+LOT TRAIN: [0 2 3 4 5 6 7 8] TEST: [1]
+Leaving out:  16
+LOT TRAIN: [0 1 3 4 5 6 7 8] TEST: [2]
+Leaving out:  17
+LOT TRAIN: [0 1 2 4 5 6 7 8] TEST: [3]
+Leaving out:  18
+LOT TRAIN: [0 1 2 3 5 6 7 8] TEST: [4]
+Leaving out:  20
+LOT TRAIN: [0 1 2 3 4 6 7 8] TEST: [5]
+Leaving out:  22
+LOT TRAIN: [0 1 2 3 4 5 7 8] TEST: [6]
+Leaving out:  25
+LOT TRAIN: [0 1 2 3 4 5 6 8] TEST: [7]
+Leaving out:  26
+LOT TRAIN: [0 1 2 3 4 5 6 7] TEST: [8]
+Leaving out:  28
+[1] "running BayesPrism with following args:"
+[1] "/home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT6_scRNAtrain.tsv"
+[2] "/home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT6_test.tsv"      
+[3] "/home/cke/Puram/scRNAlabels/"                                      
+[4] "noFS"                                                              
+[5] "fullpipeline_Jul29_noFS_pseudobulk_noFS_6_LOT"                     
+[6] "/home/cke/PseudoBulk/Results/MuSiC/"                               
+[7] "/home/cke/Puram/scRNAlabels/"                                      
+[1] "running BayesPrism with following args:"
+[1] "/home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT6_scRNAtrain.tsv"
+[2] "/home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT6_test.tsv"      
+[3] "/home/cke/Puram/scRNAlabels/"                                      
+[4] "noFS"                                                              
+[5] "fullpipeline_Jul29_noFS_pseudobulk_noFS_6_LOT"                     
+[6] "/home/cke/PseudoBulk/Results/BayesPrism/"                          
+[7] "/home/cke/PseudoBulk/Results/"                                     
+[8] "/home/cke/Puram/scRNAlabels/"                                      
+no feature selection on BLADE, be advised: You might be waiting for the end of the world!
+Get mean and std exp!
+Get common genes!  21196
+cell types:  10
+bulk samples:  1
+start BLADE!
+all of 21196 genes are used for optimization.
+All samples are used during the optimization.
+Initialization with Support vector regression
+[1] "Gene symbols detected. Cleaning up genes based on gene symbols. Recommend to use EMSEMBLE IDs for more unique mapping."
+A total of  1036  genes from RB chrM chrX chrY  have been excluded 
+[1] "running BayesPrism with following args:"
+[1] "/home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT16_scRNAtrain.tsv"
+[2] "/home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT16_test.tsv"      
+[3] "/home/cke/Puram/scRNAlabels/"                                       
+[4] "noFS"                                                               
+[5] "fullpipeline_Jul29_noFS_pseudobulk_noFS_16_LOT"                     
+[6] "/home/cke/PseudoBulk/Results/MuSiC/"                                
+[7] "/home/cke/Puram/scRNAlabels/"                                       
+A total of  819  lowly expressed genes have been excluded 
+[1] "removing non-numeric genes..."
+[1] "running BayesPrism with following args:"
+[1] "/home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT16_scRNAtrain.tsv"
+[2] "/home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT16_test.tsv"      
+[3] "/home/cke/Puram/scRNAlabels/"                                       
+[4] "noFS"                                                               
+[5] "fullpipeline_Jul29_noFS_pseudobulk_noFS_16_LOT"                     
+[6] "/home/cke/PseudoBulk/Results/BayesPrism/"                           
+[7] "/home/cke/PseudoBulk/Results/"                                      
+[8] "/home/cke/Puram/scRNAlabels/"                                       
+[1] "removing outlier genes..."
+Number of outlier genes filtered= 2 
+[1] "aligning reference and mixture..."
+no feature selection on BLADE, be advised: You might be waiting for the end of the world!
+Get mean and std exp!
+Get common genes!  21196
+cell types:  10
+bulk samples:  1
+start BLADE!
+all of 21196 genes are used for optimization.
+All samples are used during the optimization.
+Initialization with Support vector regression
+[1] "run first sampling"
+Start run... This may take a while 
+R Version:  R version 4.1.3 (2022-03-10) 
+
+[1] "Gene symbols detected. Cleaning up genes based on gene symbols. Recommend to use EMSEMBLE IDs for more unique mapping."
+A total of  1036  genes from RB chrM chrX chrY  have been excluded 
+[1] "running BayesPrism with following args:"
+[1] "/home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT17_scRNAtrain.tsv"
+[2] "/home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT17_test.tsv"      
+[3] "/home/cke/Puram/scRNAlabels/"                                       
+[4] "noFS"                                                               
+[5] "fullpipeline_Jul29_noFS_pseudobulk_noFS_17_LOT"                     
+[6] "/home/cke/PseudoBulk/Results/MuSiC/"                                
+[7] "/home/cke/Puram/scRNAlabels/"                                       
+A total of  757  lowly expressed genes have been excluded 
+[1] "removing non-numeric genes..."
+[1] "running BayesPrism with following args:"
+[1] "/home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT17_scRNAtrain.tsv"
+[2] "/home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT17_test.tsv"      
+[3] "/home/cke/Puram/scRNAlabels/"                                       
+[4] "noFS"                                                               
+[5] "fullpipeline_Jul29_noFS_pseudobulk_noFS_17_LOT"                     
+[6] "/home/cke/PseudoBulk/Results/BayesPrism/"                           
+[7] "/home/cke/PseudoBulk/Results/"                                      
+[8] "/home/cke/Puram/scRNAlabels/"                                       
+no feature selection on BLADE, be advised: You might be waiting for the end of the world!
+Get mean and std exp!
+Get common genes!  21196
+cell types:  10
+bulk samples:  1
+start BLADE!
+all of 21196 genes are used for optimization.
+All samples are used during the optimization.
+Initialization with Support vector regression
+[1] "removing outlier genes..."
+Number of outlier genes filtered= 3 
+[1] "aligning reference and mixture..."
+[1] "run first sampling"
+Start run... This may take a while 
+R Version:  R version 4.1.3 (2022-03-10) 
+
+[1] "running BayesPrism with following args:"
+[1] "/home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT18_scRNAtrain.tsv"
+[2] "/home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT18_test.tsv"      
+[3] "/home/cke/Puram/scRNAlabels/"                                       
+[4] "noFS"                                                               
+[5] "fullpipeline_Jul29_noFS_pseudobulk_noFS_18_LOT"                     
+[6] "/home/cke/PseudoBulk/Results/MuSiC/"                                
+[7] "/home/cke/Puram/scRNAlabels/"                                       
+[1] "running BayesPrism with following args:"
+[1] "/home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT18_scRNAtrain.tsv"
+[2] "/home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT18_test.tsv"      
+[3] "/home/cke/Puram/scRNAlabels/"                                       
+[4] "noFS"                                                               
+[5] "fullpipeline_Jul29_noFS_pseudobulk_noFS_18_LOT"                     
+[6] "/home/cke/PseudoBulk/Results/BayesPrism/"                           
+[7] "/home/cke/PseudoBulk/Results/"                                      
+[8] "/home/cke/Puram/scRNAlabels/"                                       
+no feature selection on BLADE, be advised: You might be waiting for the end of the world!
+Get mean and std exp!
+Get common genes!  21196
+cell types:  10
+bulk samples:  1
+start BLADE!
+all of 21196 genes are used for optimization.
+All samples are used during the optimization.
+Initialization with Support vector regression
+[1] "Gene symbols detected. Cleaning up genes based on gene symbols. Recommend to use EMSEMBLE IDs for more unique mapping."
+A total of  1036  genes from RB chrM chrX chrY  have been excluded 
+A total of  714  lowly expressed genes have been excluded 
+[1] "removing non-numeric genes..."
+[1] "removing outlier genes..."
+Number of outlier genes filtered= 4 
+[1] "aligning reference and mixture..."
+[1] "run first sampling"
+Start run... This may take a while 
+R Version:  R version 4.1.3 (2022-03-10) 
+
+[1] "running BayesPrism with following args:"
+[1] "/home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT20_scRNAtrain.tsv"
+[2] "/home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT20_test.tsv"      
+[3] "/home/cke/Puram/scRNAlabels/"                                       
+[4] "noFS"                                                               
+[5] "fullpipeline_Jul29_noFS_pseudobulk_noFS_20_LOT"                     
+[6] "/home/cke/PseudoBulk/Results/MuSiC/"                                
+[7] "/home/cke/Puram/scRNAlabels/"                                       
+no feature selection on BLADE, be advised: You might be waiting for the end of the world!
+Get mean and std exp!
+Get common genes!  21196
+cell types:  10
+bulk samples:  1
+start BLADE!
+all of 21196 genes are used for optimization.
+All samples are used during the optimization.
+Initialization with Support vector regression
+[1] "running BayesPrism with following args:"
+[1] "/home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT20_scRNAtrain.tsv"
+[2] "/home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT20_test.tsv"      
+[3] "/home/cke/Puram/scRNAlabels/"                                       
+[4] "noFS"                                                               
+[5] "fullpipeline_Jul29_noFS_pseudobulk_noFS_20_LOT"                     
+[6] "/home/cke/PseudoBulk/Results/BayesPrism/"                           
+[7] "/home/cke/PseudoBulk/Results/"                                      
+[8] "/home/cke/Puram/scRNAlabels/"                                       
+[1] "Gene symbols detected. Cleaning up genes based on gene symbols. Recommend to use EMSEMBLE IDs for more unique mapping."
+A total of  1036  genes from RB chrM chrX chrY  have been excluded 
+A total of  790  lowly expressed genes have been excluded 
+[1] "removing non-numeric genes..."
+[1] "removing outlier genes..."
+Number of outlier genes filtered= 4 
+[1] "aligning reference and mixture..."
+[1] "running BayesPrism with following args:"
+[1] "/home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT22_scRNAtrain.tsv"
+[2] "/home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT22_test.tsv"      
+[3] "/home/cke/Puram/scRNAlabels/"                                       
+[4] "noFS"                                                               
+[5] "fullpipeline_Jul29_noFS_pseudobulk_noFS_22_LOT"                     
+[6] "/home/cke/PseudoBulk/Results/MuSiC/"                                
+[7] "/home/cke/Puram/scRNAlabels/"                                       
+no feature selection on BLADE, be advised: You might be waiting for the end of the world!
+Get mean and std exp!
+Get common genes!  21196
+cell types:  10
+bulk samples:  1
+start BLADE!
+all of 21196 genes are used for optimization.
+All samples are used during the optimization.
+Initialization with Support vector regression
+[1] "running BayesPrism with following args:"
+[1] "/home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT22_scRNAtrain.tsv"
+[2] "/home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT22_test.tsv"      
+[3] "/home/cke/Puram/scRNAlabels/"                                       
+[4] "noFS"                                                               
+[5] "fullpipeline_Jul29_noFS_pseudobulk_noFS_22_LOT"                     
+[6] "/home/cke/PseudoBulk/Results/BayesPrism/"                           
+[7] "/home/cke/PseudoBulk/Results/"                                      
+[8] "/home/cke/Puram/scRNAlabels/"                                       
+[1] "run first sampling"
+Start run... This may take a while 
+R Version:  R version 4.1.3 (2022-03-10) 
+
+[1] "running BayesPrism with following args:"
+[1] "/home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT25_scRNAtrain.tsv"
+[2] "/home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT25_test.tsv"      
+[3] "/home/cke/Puram/scRNAlabels/"                                       
+[4] "noFS"                                                               
+[5] "fullpipeline_Jul29_noFS_pseudobulk_noFS_25_LOT"                     
+[6] "/home/cke/PseudoBulk/Results/MuSiC/"                                
+[7] "/home/cke/Puram/scRNAlabels/"                                       
+no feature selection on BLADE, be advised: You might be waiting for the end of the world!
+Get mean and std exp!
+Get common genes!  21196
+cell types:  10
+bulk samples:  1
+start BLADE!
+all of 21196 genes are used for optimization.
+All samples are used during the optimization.
+Initialization with Support vector regression
+[1] "running BayesPrism with following args:"
+[1] "/home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT25_scRNAtrain.tsv"
+[2] "/home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT25_test.tsv"      
+[3] "/home/cke/Puram/scRNAlabels/"                                       
+[4] "noFS"                                                               
+[5] "fullpipeline_Jul29_noFS_pseudobulk_noFS_25_LOT"                     
+[6] "/home/cke/PseudoBulk/Results/BayesPrism/"                           
+[7] "/home/cke/PseudoBulk/Results/"                                      
+[8] "/home/cke/Puram/scRNAlabels/"                                       
+[1] "Gene symbols detected. Cleaning up genes based on gene symbols. Recommend to use EMSEMBLE IDs for more unique mapping."
+A total of  1036  genes from RB chrM chrX chrY  have been excluded 
+[1] "merge subtypes"
+        Fibroblast tumor B cell myocyte other Macrophage Endothelial T cell
+Min.         0.375 0.381  0.023       0 0.029      0.011       0.174  0.003
+1st Qu.      0.375 0.381  0.023       0 0.029      0.011       0.174  0.003
+Median       0.375 0.381  0.023       0 0.029      0.011       0.174  0.003
+Mean         0.375 0.381  0.023       0 0.029      0.011       0.174  0.003
+3rd Qu.      0.375 0.381  0.023       0 0.029      0.011       0.174  0.003
+Max.         0.375 0.381  0.023       0 0.029      0.011       0.174  0.003
+        Dendritic  Mast
+Min.            0 0.003
+1st Qu.         0 0.003
+Median          0 0.003
+Mean            0 0.003
+3rd Qu.         0 0.003
+Max.            0 0.003
+[1] "pooling information across samples"
+Start optimization... This may take a while 
+A total of  840  lowly expressed genes have been excluded 
+[1] "removing non-numeric genes..."
+No feature filtering is done (fsel = 0)
+[1] "removing outlier genes..."
+Number of outlier genes filtered= 4 
+[1] "aligning reference and mixture..."
+pseudobulk mode: no feature selection
+2022-07-29 00:57:38
+now running in cmd:  Rscript /home/cke/runscripts/runMuSiC.r /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT6_scRNAtrain.tsv /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT6_test.tsv /home/cke/Puram/scRNAlabels/ noFS fullpipeline_Jul29_noFS_pseudobulk_noFS_6_LOT /home/cke/PseudoBulk/Results/MuSiC/ &
+now running in cmd:  Rscript /home/cke/runscripts/runBP.r /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT6_scRNAtrain.tsv /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT6_test.tsv /home/cke/Puram/scRNAlabels/ noFS fullpipeline_Jul29_noFS_pseudobulk_noFS_6_LOT /home/cke/PseudoBulk/Results/BayesPrism/ /home/cke/PseudoBulk/Results/ &
+now running in cmd:  python /home/cke/runscripts/runBLADE.py /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT6_std.tsv /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT6_mean.tsv /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT6_test.tsv /home/cke/PseudoBulk/Results/BLADE/ --name fullpipeline_Jul29_noFS_pseudobulk__LOT6_noFS &
+pseudobulk mode: no feature selection
+2022-07-29 00:58:38
+now running in cmd:  Rscript /home/cke/runscripts/runMuSiC.r /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT16_scRNAtrain.tsv /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT16_test.tsv /home/cke/Puram/scRNAlabels/ noFS fullpipeline_Jul29_noFS_pseudobulk_noFS_16_LOT /home/cke/PseudoBulk/Results/MuSiC/ &
+now running in cmd:  Rscript /home/cke/runscripts/runBP.r /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT16_scRNAtrain.tsv /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT16_test.tsv /home/cke/Puram/scRNAlabels/ noFS fullpipeline_Jul29_noFS_pseudobulk_noFS_16_LOT /home/cke/PseudoBulk/Results/BayesPrism/ /home/cke/PseudoBulk/Results/ &
+now running in cmd:  python /home/cke/runscripts/runBLADE.py /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT16_std.tsv /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT16_mean.tsv /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT16_test.tsv /home/cke/PseudoBulk/Results/BLADE/ --name fullpipeline_Jul29_noFS_pseudobulk__LOT16_noFS &
+pseudobulk mode: no feature selection
+2022-07-29 00:59:38
+now running in cmd:  Rscript /home/cke/runscripts/runMuSiC.r /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT17_scRNAtrain.tsv /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT17_test.tsv /home/cke/Puram/scRNAlabels/ noFS fullpipeline_Jul29_noFS_pseudobulk_noFS_17_LOT /home/cke/PseudoBulk/Results/MuSiC/ &
+now running in cmd:  Rscript /home/cke/runscripts/runBP.r /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT17_scRNAtrain.tsv /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT17_test.tsv /home/cke/Puram/scRNAlabels/ noFS fullpipeline_Jul29_noFS_pseudobulk_noFS_17_LOT /home/cke/PseudoBulk/Results/BayesPrism/ /home/cke/PseudoBulk/Results/ &
+now running in cmd:  python /home/cke/runscripts/runBLADE.py /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT17_std.tsv /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT17_mean.tsv /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT17_test.tsv /home/cke/PseudoBulk/Results/BLADE/ --name fullpipeline_Jul29_noFS_pseudobulk__LOT17_noFS &
+pseudobulk mode: no feature selection
+2022-07-29 01:00:38
+now running in cmd:  Rscript /home/cke/runscripts/runMuSiC.r /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT18_scRNAtrain.tsv /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT18_test.tsv /home/cke/Puram/scRNAlabels/ noFS fullpipeline_Jul29_noFS_pseudobulk_noFS_18_LOT /home/cke/PseudoBulk/Results/MuSiC/ &
+now running in cmd:  Rscript /home/cke/runscripts/runBP.r /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT18_scRNAtrain.tsv /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT18_test.tsv /home/cke/Puram/scRNAlabels/ noFS fullpipeline_Jul29_noFS_pseudobulk_noFS_18_LOT /home/cke/PseudoBulk/Results/BayesPrism/ /home/cke/PseudoBulk/Results/ &
+now running in cmd:  python /home/cke/runscripts/runBLADE.py /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT18_std.tsv /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT18_mean.tsv /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT18_test.tsv /home/cke/PseudoBulk/Results/BLADE/ --name fullpipeline_Jul29_noFS_pseudobulk__LOT18_noFS &
+pseudobulk mode: no feature selection
+2022-07-29 01:01:38
+now running in cmd:  Rscript /home/cke/runscripts/runMuSiC.r /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT20_scRNAtrain.tsv /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT20_test.tsv /home/cke/Puram/scRNAlabels/ noFS fullpipeline_Jul29_noFS_pseudobulk_noFS_20_LOT /home/cke/PseudoBulk/Results/MuSiC/ &
+now running in cmd:  Rscript /home/cke/runscripts/runBP.r /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT20_scRNAtrain.tsv /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT20_test.tsv /home/cke/Puram/scRNAlabels/ noFS fullpipeline_Jul29_noFS_pseudobulk_noFS_20_LOT /home/cke/PseudoBulk/Results/BayesPrism/ /home/cke/PseudoBulk/Results/ &
+now running in cmd:  python /home/cke/runscripts/runBLADE.py /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT20_std.tsv /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT20_mean.tsv /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT20_test.tsv /home/cke/PseudoBulk/Results/BLADE/ --name fullpipeline_Jul29_noFS_pseudobulk__LOT20_noFS &
+pseudobulk mode: no feature selection
+2022-07-29 01:02:38
+now running in cmd:  Rscript /home/cke/runscripts/runMuSiC.r /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT22_scRNAtrain.tsv /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT22_test.tsv /home/cke/Puram/scRNAlabels/ noFS fullpipeline_Jul29_noFS_pseudobulk_noFS_22_LOT /home/cke/PseudoBulk/Results/MuSiC/ &
+now running in cmd:  Rscript /home/cke/runscripts/runBP.r /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT22_scRNAtrain.tsv /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT22_test.tsv /home/cke/Puram/scRNAlabels/ noFS fullpipeline_Jul29_noFS_pseudobulk_noFS_22_LOT /home/cke/PseudoBulk/Results/BayesPrism/ /home/cke/PseudoBulk/Results/ &
+now running in cmd:  python /home/cke/runscripts/runBLADE.py /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT22_std.tsv /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT22_mean.tsv /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT22_test.tsv /home/cke/PseudoBulk/Results/BLADE/ --name fullpipeline_Jul29_noFS_pseudobulk__LOT22_noFS &
+pseudobulk mode: no feature selection
+2022-07-29 01:03:39
+now running in cmd:  Rscript /home/cke/runscripts/runMuSiC.r /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT25_scRNAtrain.tsv /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT25_test.tsv /home/cke/Puram/scRNAlabels/ noFS fullpipeline_Jul29_noFS_pseudobulk_noFS_25_LOT /home/cke/PseudoBulk/Results/MuSiC/ &
+now running in cmd:  Rscript /home/cke/runscripts/runBP.r /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT25_scRNAtrain.tsv /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT25_test.tsv /home/cke/Puram/scRNAlabels/ noFS fullpipeline_Jul29_noFS_pseudobulk_noFS_25_LOT /home/cke/PseudoBulk/Results/BayesPrism/ /home/cke/PseudoBulk/Results/ &
+now running in cmd:  python /home/cke/runscripts/runBLADE.py /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT25_std.tsv /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT25_mean.tsv /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT25_test.tsv /home/cke/PseudoBulk/Results/BLADE/ --name fullpipeline_Jul29_noFS_pseudobulk__LOT25_noFS &
+pseudobulk mode: no feature selection
+2022-07-29 01:04:39
+now running in cmd:  Rscript /home/cke/runscripts/runMuSiC.r /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT26_scRNAtrain.tsv /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT26_test.tsv /home/cke/Puram/scRNAlabels/ noFS fullpipeline_Jul29_noFS_pseudobulk_noFS_26_LOT /home/cke/PseudoBulk/Results/MuSiC/ &
+now running in cmd:  Rscript /home/cke/runscripts/runBP.r /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT26_scRNAtrain.tsv /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT26_test.tsv /home/cke/Puram/scRNAlabels/ noFS fullpipeline_Jul29_noFS_pseudobulk_noFS_26_LOT /home/cke/PseudoBulk/Results/BayesPrism/ /home/cke/PseudoBulk/Results/ &
+now running in cmd:  [1] "running BayesPrism with following args:"
+[1] "/home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT26_scRNAtrain.tsv"
+[2] "/home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT26_test.tsv"      
+[3] "/home/cke/Puram/scRNAlabels/"                                       
+[4] "noFS"                                                               
+[5] "fullpipeline_Jul29_noFS_pseudobulk_noFS_26_LOT"                     
+[6] "/home/cke/PseudoBulk/Results/MuSiC/"                                
+[7] "/home/cke/Puram/scRNAlabels/"                                       
+no feature selection on BLADE, be advised: You might be waiting for the end of the world!
+Get mean and std exp!
+Get common genes!  21196
+cell types:  10
+bulk samples:  1
+start BLADE!
+all of 21196 genes are used for optimization.
+All samples are used during the optimization.
+Initialization with Support vector regression
+[1] "run first sampling"
+Start run... This may take a while 
+[1] "running BayesPrism with following args:"
+[1] "/home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT26_scRNAtrain.tsv"
+[2] "/home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT26_test.tsv"      
+[3] "/home/cke/Puram/scRNAlabels/"                                       
+[4] "noFS"                                                               
+[5] "fullpipeline_Jul29_noFS_pseudobulk_noFS_26_LOT"                     
+[6] "/home/cke/PseudoBulk/Results/BayesPrism/"                           
+[7] "/home/cke/PseudoBulk/Results/"                                      
+[8] "/home/cke/Puram/scRNAlabels/"                                       
+R Version:  R version 4.1.3 (2022-03-10) 
+
+python /home/cke/runscripts/runBLADE.py /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT26_std.tsv /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT26_mean.tsv /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT26_test.tsv /home/cke/PseudoBulk/Results/BLADE/ --name fullpipeline_Jul29_noFS_pseudobulk__LOT26_noFS &
+pseudobulk mode: no feature selection
+2022-07-29 01:05:39
+now running in cmd:  Rscript /home/cke/runscripts/runMuSiC.r /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT28_scRNAtrain.tsv /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT28_test.tsv /home/cke/Puram/scRNAlabels/ noFS fullpipeline_Jul29_noFS_pseudobulk_noFS_28_LOT /home/cke/PseudoBulk/Results/MuSiC/ &
+now running in cmd:  Rscript /home/cke/runscripts/runBP.r /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT28_scRNAtrain.tsv /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT28_test.tsv /home/cke/Puram/scRNAlabels/ noFS fullpipeline_Jul29_noFS_pseudobulk_noFS_28_LOT /home/cke/PseudoBulk/Results/BayesPrism/ /home/cke/PseudoBulk/Results/ &
+now running in cmd:  python /home/cke/runscripts/runBLADE.py /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT28_std.tsv /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT28_mean.tsv /home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT28_test.tsv /home/cke/PseudoBulk/Results/BLADE/ --name fullpipeline_Jul29_noFS_pseudobulk__LOT28_noFS &
+job finished! details of arguments used in this run:  Namespace(path_adata='/home/cke/Puram/Puram_scanpy.h5ad', mode='pseudobulk', out='/home/cke/PseudoBulk/InputToWrapper/', out_res='/home/cke/PseudoBulk/Results/', path_label='/home/cke/Puram/scRNAlabels/', path_bulk=False, folder_marker=False, name='fullpipeline_Jul29_noFS', methods=['MuSiC', 'BP', 'BLADE'], keyword=['top', 'marker', 'DEG'])
+[1] "running BayesPrism with following args:"
+[1] "/home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT28_scRNAtrain.tsv"
+[2] "/home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT28_test.tsv"      
+[3] "/home/cke/Puram/scRNAlabels/"                                       
+[4] "noFS"                                                               
+[5] "fullpipeline_Jul29_noFS_pseudobulk_noFS_28_LOT"                     
+[6] "/home/cke/PseudoBulk/Results/MuSiC/"                                
+[7] "/home/cke/Puram/scRNAlabels/"                                       
+no feature selection on BLADE, be advised: You might be waiting for the end of the world!
+Get mean and std exp!
+Get common genes!  21196
+cell types:  10
+bulk samples:  1
+start BLADE!
+all of 21196 genes are used for optimization.
+All samples are used during the optimization.
+Initialization with Support vector regression
+[1] "running BayesPrism with following args:"
+[1] "/home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT28_scRNAtrain.tsv"
+[2] "/home/cke/PseudoBulk/InputToWrapper/pseudobulk_LOT28_test.tsv"      
+[3] "/home/cke/Puram/scRNAlabels/"                                       
+[4] "noFS"                                                               
+[5] "fullpipeline_Jul29_noFS_pseudobulk_noFS_28_LOT"                     
+[6] "/home/cke/PseudoBulk/Results/BayesPrism/"                           
+[7] "/home/cke/PseudoBulk/Results/"                                      
+[8] "/home/cke/Puram/scRNAlabels/"                                       
+No feature filtering is done (fsel = 0)
+[1] "Gene symbols detected. Cleaning up genes based on gene symbols. Recommend to use EMSEMBLE IDs for more unique mapping."
+A total of  1036  genes from RB chrM chrX chrY  have been excluded 
+A total of  677  lowly expressed genes have been excluded 
+[1] "removing non-numeric genes..."
+[1] "removing outlier genes..."
+Number of outlier genes filtered= 4 
+[1] "aligning reference and mixture..."
+[1] "merge subtypes"
+        Fibroblast tumor B cell myocyte other Macrophage Endothelial T cell
+Min.         0.216 0.142      0   0.002     0      0.008       0.099  0.498
+1st Qu.      0.216 0.142      0   0.002     0      0.008       0.099  0.498
+Median       0.216 0.142      0   0.002     0      0.008       0.099  0.498
+Mean         0.216 0.142      0   0.002     0      0.008       0.099  0.498
+3rd Qu.      0.216 0.142      0   0.002     0      0.008       0.099  0.498
+Max.         0.216 0.142      0   0.002     0      0.008       0.099  0.498
+        Dendritic  Mast
+Min.        0.002 0.033
+1st Qu.     0.002 0.033
+Median      0.002 0.033
+Mean        0.002 0.033
+3rd Qu.     0.002 0.033
+Max.        0.002 0.033
+[1] "pooling information across samples"
+Start optimization... This may take a while 
+[1] "Gene symbols detected. Cleaning up genes based on gene symbols. Recommend to use EMSEMBLE IDs for more unique mapping."
+A total of  1036  genes from RB chrM chrX chrY  have been excluded 
+[1] "run first sampling"
+Start run... This may take a while 
+A total of  826  lowly expressed genes have been excluded 
+[1] "removing non-numeric genes..."
+R Version:  R version 4.1.3 (2022-03-10) 
+
+[1] "run final sampling"
+Start run... This may take a while 
+[1] "removing outlier genes..."
+Number of outlier genes filtered= 5 
+[1] "aligning reference and mixture..."
+[1] "run first sampling"
+Start run... This may take a while 
+R Version:  R version 4.1.3 (2022-03-10) 
+
+No feature filtering is done (fsel = 0)
+[1] "Gene symbols detected. Cleaning up genes based on gene symbols. Recommend to use EMSEMBLE IDs for more unique mapping."
+A total of  1036  genes from RB chrM chrX chrY  have been excluded 
+A total of  909  lowly expressed genes have been excluded 
+[1] "removing non-numeric genes..."
+[1] "removing outlier genes..."
+Number of outlier genes filtered= 4 
+[1] "aligning reference and mixture..."
+[1] "Gene symbols detected. Cleaning up genes based on gene symbols. Recommend to use EMSEMBLE IDs for more unique mapping."
+A total of  1036  genes from RB chrM chrX chrY  have been excluded 
+A total of  812  lowly expressed genes have been excluded 
+[1] "run first sampling"
+Start run... This may take a while 
+[1] "removing non-numeric genes..."
+R Version:  R version 4.1.3 (2022-03-10) 
+
+[1] "removing outlier genes..."
+Number of outlier genes filtered= 3 
+[1] "aligning reference and mixture..."
+No feature filtering is done (fsel = 0)
+[1] "run first sampling"
+Start run... This may take a while 
+R Version:  R version 4.1.3 (2022-03-10) 
+
+[1] "merge subtypes"
+        Fibroblast tumor B cell myocyte other Macrophage Endothelial T cell
+Min.         0.072 0.752  0.006       0     0      0.002       0.016   0.14
+1st Qu.      0.072 0.752  0.006       0     0      0.002       0.016   0.14
+Median       0.072 0.752  0.006       0     0      0.002       0.016   0.14
+Mean         0.072 0.752  0.006       0     0      0.002       0.016   0.14
+3rd Qu.      0.072 0.752  0.006       0     0      0.002       0.016   0.14
+Max.         0.072 0.752  0.006       0     0      0.002       0.016   0.14
+        Dendritic  Mast
+Min.            0 0.012
+1st Qu.         0 0.012
+Median          0 0.012
+Mean            0 0.012
+3rd Qu.         0 0.012
+Max.            0 0.012
+[1] "pooling information across samples"
+Start optimization... This may take a while 
+[1] "run final sampling"
+Start run... This may take a while 
+No feature filtering is done (fsel = 0)
+[1] "run final sampling"
+Start run... This may take a while 
+No feature filtering is done (fsel = 0)
+No feature filtering is done (fsel = 0)
+No feature filtering is done (fsel = 0)
+[1] "merge subtypes"
+        Fibroblast tumor B cell myocyte other Macrophage Endothelial T cell
+Min.         0.098 0.221  0.015   0.001 0.183       0.03       0.049  0.379
+1st Qu.      0.098 0.221  0.015   0.001 0.183       0.03       0.049  0.379
+Median       0.098 0.221  0.015   0.001 0.183       0.03       0.049  0.379
+Mean         0.098 0.221  0.015   0.001 0.183       0.03       0.049  0.379
+3rd Qu.      0.098 0.221  0.015   0.001 0.183       0.03       0.049  0.379
+Max.         0.098 0.221  0.015   0.001 0.183       0.03       0.049  0.379
+        Dendritic  Mast
+Min.            0 0.024
+1st Qu.         0 0.024
+Median          0 0.024
+Mean            0 0.024
+3rd Qu.         0 0.024
+Max.            0 0.024
+[1] "pooling information across samples"
+Start optimization... This may take a while 
+[1] "merge subtypes"
+        Fibroblast tumor B cell myocyte other Macrophage Endothelial T cell
+Min.         0.025 0.949      0       0 0.023      0.001       0.003  0.001
+1st Qu.      0.025 0.949      0       0 0.023      0.001       0.003  0.001
+Median       0.025 0.949      0       0 0.023      0.001       0.003  0.001
+Mean         0.025 0.949      0       0 0.023      0.001       0.003  0.001
+3rd Qu.      0.025 0.949      0       0 0.023      0.001       0.003  0.001
+Max.         0.025 0.949      0       0 0.023      0.001       0.003  0.001
+        Dendritic Mast
+Min.            0    0
+1st Qu.         0    0
+Median          0    0
+Mean            0    0
+3rd Qu.         0    0
+Max.            0    0
+[1] "pooling information across samples"
+Start optimization... This may take a while 
+        tumor Fibroblast B cell myocyte other Macrophage Endothelial T cell
+Min.    0.381      0.375  0.023       0 0.029      0.011       0.174  0.003
+1st Qu. 0.381      0.375  0.023       0 0.029      0.011       0.174  0.003
+Median  0.381      0.375  0.023       0 0.029      0.011       0.174  0.003
+Mean    0.381      0.375  0.023       0 0.029      0.011       0.174  0.003
+3rd Qu. 0.381      0.375  0.023       0 0.029      0.011       0.174  0.003
+Max.    0.381      0.375  0.023       0 0.029      0.011       0.174  0.003
+        Dendritic  Mast
+Min.            0 0.003
+1st Qu.         0 0.003
+Median          0 0.003
+Mean            0 0.003
+3rd Qu.         0 0.003
+Max.            0 0.003
+[1] "only one mixture sample. vst transformation is NOT feasible"
+[1] "run final sampling"
+Start run... This may take a while 
+[1] "run final sampling"
+Start run... This may take a while 
+[1] "merge subtypes"
+        Fibroblast tumor B cell myocyte other Macrophage Endothelial T cell
+Min.         0.248 0.638      0       0     0          0       0.013  0.006
+1st Qu.      0.248 0.638      0       0     0          0       0.013  0.006
+Median       0.248 0.638      0       0     0          0       0.013  0.006
+Mean         0.248 0.638      0       0     0          0       0.013  0.006
+3rd Qu.      0.248 0.638      0       0     0          0       0.013  0.006
+Max.         0.248 0.638      0       0     0          0       0.013  0.006
+        Dendritic Mast
+Min.        0.004 0.09
+1st Qu.     0.004 0.09
+Median      0.004 0.09
+Mean        0.004 0.09
+3rd Qu.     0.004 0.09
+Max.        0.004 0.09
+[1] "pooling information across samples"
+Start optimization... This may take a while 
+No feature filtering is done (fsel = 0)
+[1] "merge subtypes"
+        Fibroblast tumor other Macrophage Endothelial B cell Dendritic T cell
+Min.         0.415  0.28 0.005      0.014       0.007  0.028      0.01  0.217
+1st Qu.      0.415  0.28 0.005      0.014       0.007  0.028      0.01  0.217
+Median       0.415  0.28 0.005      0.014       0.007  0.028      0.01  0.217
+Mean         0.415  0.28 0.005      0.014       0.007  0.028      0.01  0.217
+3rd Qu.      0.415  0.28 0.005      0.014       0.007  0.028      0.01  0.217
+Max.         0.415  0.28 0.005      0.014       0.007  0.028      0.01  0.217
+         Mast myocyte
+Min.    0.015   0.009
+1st Qu. 0.015   0.009
+Median  0.015   0.009
+Mean    0.015   0.009
+3rd Qu. 0.015   0.009
+Max.    0.015   0.009
+[1] "pooling information across samples"
+Start optimization... This may take a while 
+        tumor Fibroblast B cell myocyte other Macrophage Endothelial T cell
+Min.    0.142      0.216      0   0.002     0      0.008       0.099  0.498
+1st Qu. 0.142      0.216      0   0.002     0      0.008       0.099  0.498
+Median  0.142      0.216      0   0.002     0      0.008       0.099  0.498
+Mean    0.142      0.216      0   0.002     0      0.008       0.099  0.498
+3rd Qu. 0.142      0.216      0   0.002     0      0.008       0.099  0.498
+Max.    0.142      0.216      0   0.002     0      0.008       0.099  0.498
+        Dendritic  Mast
+Min.        0.002 0.033
+1st Qu.     0.002 0.033
+Median      0.002 0.033
+Mean        0.002 0.033
+3rd Qu.     0.002 0.033
+Max.        0.002 0.033
+[1] "only one mixture sample. vst transformation is NOT feasible"
+[1] "run final sampling"
+Start run... This may take a while 
+[1] "merge subtypes"
+        Fibroblast tumor B cell myocyte other Endothelial T cell Dendritic
+Min.         0.393 0.378  0.002       0 0.132       0.029  0.017     0.034
+1st Qu.      0.393 0.378  0.002       0 0.132       0.029  0.017     0.034
+Median       0.393 0.378  0.002       0 0.132       0.029  0.017     0.034
+Mean         0.393 0.378  0.002       0 0.132       0.029  0.017     0.034
+3rd Qu.      0.393 0.378  0.002       0 0.132       0.029  0.017     0.034
+Max.         0.393 0.378  0.002       0 0.132       0.029  0.017     0.034
+         Mast Macrophage
+Min.    0.001      0.014
+1st Qu. 0.001      0.014
+Median  0.001      0.014
+Mean    0.001      0.014
+3rd Qu. 0.001      0.014
+Max.    0.001      0.014
+[1] "pooling information across samples"
+Start optimization... This may take a while 
+[1] "merge subtypes"
+        tumor Fibroblast B cell myocyte other Macrophage T cell Dendritic  Mast
+Min.    0.242      0.659   0.04   0.026     0      0.004  0.001     0.001 0.002
+1st Qu. 0.242      0.659   0.04   0.026     0      0.004  0.001     0.001 0.002
+Median  0.242      0.659   0.04   0.026     0      0.004  0.001     0.001 0.002
+Mean    0.242      0.659   0.04   0.026     0      0.004  0.001     0.001 0.002
+3rd Qu. 0.242      0.659   0.04   0.026     0      0.004  0.001     0.001 0.002
+Max.    0.242      0.659   0.04   0.026     0      0.004  0.001     0.001 0.002
+        Endothelial
+Min.          0.025
+1st Qu.       0.025
+Median        0.025
+Mean          0.025
+3rd Qu.       0.025
+Max.          0.025
+[1] "pooling information across samples"
+Start optimization... This may take a while 
+        tumor Fibroblast B cell myocyte other Macrophage Endothelial T cell
+Min.    0.752      0.072  0.006       0     0      0.002       0.016   0.14
+1st Qu. 0.752      0.072  0.006       0     0      0.002       0.016   0.14
+Median  0.752      0.072  0.006       0     0      0.002       0.016   0.14
+Mean    0.752      0.072  0.006       0     0      0.002       0.016   0.14
+3rd Qu. 0.752      0.072  0.006       0     0      0.002       0.016   0.14
+Max.    0.752      0.072  0.006       0     0      0.002       0.016   0.14
+        Dendritic  Mast
+Min.            0 0.012
+1st Qu.         0 0.012
+Median          0 0.012
+Mean            0 0.012
+3rd Qu.         0 0.012
+Max.            0 0.012
+[1] "only one mixture sample. vst transformation is NOT feasible"
+[1] "run final sampling"
+Start run... This may take a while 
+[1] "run final sampling"
+Start run... This may take a while 
+        tumor Fibroblast B cell myocyte other Macrophage Endothelial T cell
+Min.    0.949      0.025      0       0 0.023      0.001       0.003      0
+1st Qu. 0.949      0.025      0       0 0.023      0.001       0.003      0
+Median  0.949      0.025      0       0 0.023      0.001       0.003      0
+Mean    0.949      0.025      0       0 0.023      0.001       0.003      0
+3rd Qu. 0.949      0.025      0       0 0.023      0.001       0.003      0
+Max.    0.949      0.025      0       0 0.023      0.001       0.003      0
+        Dendritic Mast
+Min.            0    0
+1st Qu.         0    0
+Median          0    0
+Mean            0    0
+3rd Qu.         0    0
+Max.            0    0
+[1] "only one mixture sample. vst transformation is NOT feasible"
+        tumor Fibroblast B cell myocyte other Macrophage Endothelial T cell
+Min.    0.221      0.098  0.015   0.001 0.183       0.03       0.049  0.379
+1st Qu. 0.221      0.098  0.015   0.001 0.183       0.03       0.049  0.379
+Median  0.221      0.098  0.015   0.001 0.183       0.03       0.049  0.379
+Mean    0.221      0.098  0.015   0.001 0.183       0.03       0.049  0.379
+3rd Qu. 0.221      0.098  0.015   0.001 0.183       0.03       0.049  0.379
+Max.    0.221      0.098  0.015   0.001 0.183       0.03       0.049  0.379
+        Dendritic  Mast
+Min.            0 0.024
+1st Qu.         0 0.024
+Median          0 0.024
+Mean            0 0.024
+3rd Qu.         0 0.024
+Max.            0 0.024
+[1] "only one mixture sample. vst transformation is NOT feasible"
+[1] "run final sampling"
+Start run... This may take a while 
+Done optimization, elapsed time (min): 77.33008234500885
+export to:  /home/cke/PseudoBulk/Results/BLADE/fullpipeline_Jul29_noFS_pseudobulk__LOT16_noFS_BLADEout_noFS.pickle
+        tumor Fibroblast B cell myocyte other Macrophage Endothelial T cell
+Min.    0.638      0.248      0       0     0          0       0.013  0.006
+1st Qu. 0.638      0.248      0       0     0          0       0.013  0.006
+Median  0.638      0.248      0       0     0          0       0.013  0.006
+Mean    0.638      0.248      0       0     0          0       0.013  0.006
+3rd Qu. 0.638      0.248      0       0     0          0       0.013  0.006
+Max.    0.638      0.248      0       0     0          0       0.013  0.006
+        Dendritic Mast
+Min.        0.004 0.09
+1st Qu.     0.004 0.09
+Median      0.004 0.09
+Mean        0.004 0.09
+3rd Qu.     0.004 0.09
+Max.        0.004 0.09
+[1] "only one mixture sample. vst transformation is NOT feasible"
+        tumor Fibroblast other Macrophage Endothelial B cell Dendritic T cell
+Min.     0.28      0.415 0.005      0.014       0.007  0.028      0.01  0.217
+1st Qu.  0.28      0.415 0.005      0.014       0.007  0.028      0.01  0.217
+Median   0.28      0.415 0.005      0.014       0.007  0.028      0.01  0.217
+Mean     0.28      0.415 0.005      0.014       0.007  0.028      0.01  0.217
+3rd Qu.  0.28      0.415 0.005      0.014       0.007  0.028      0.01  0.217
+Max.     0.28      0.415 0.005      0.014       0.007  0.028      0.01  0.217
+         Mast myocyte
+Min.    0.015   0.009
+1st Qu. 0.015   0.009
+Median  0.015   0.009
+Mean    0.015   0.009
+3rd Qu. 0.015   0.009
+Max.    0.015   0.009
+[1] "only one mixture sample. vst transformation is NOT feasible"
+        tumor Fibroblast B cell myocyte other Endothelial T cell Dendritic
+Min.    0.378      0.393  0.002       0 0.132       0.029  0.016     0.034
+1st Qu. 0.378      0.393  0.002       0 0.132       0.029  0.016     0.034
+Median  0.378      0.393  0.002       0 0.132       0.029  0.016     0.034
+Mean    0.378      0.393  0.002       0 0.132       0.029  0.016     0.034
+3rd Qu. 0.378      0.393  0.002       0 0.132       0.029  0.016     0.034
+Max.    0.378      0.393  0.002       0 0.132       0.029  0.016     0.034
+         Mast Macrophage
+Min.    0.001      0.014
+1st Qu. 0.001      0.014
+Median  0.001      0.014
+Mean    0.001      0.014
+3rd Qu. 0.001      0.014
+Max.    0.001      0.014
+[1] "only one mixture sample. vst transformation is NOT feasible"
+        tumor Fibroblast B cell myocyte other Macrophage T cell Dendritic  Mast
+Min.    0.242      0.659   0.04   0.026     0      0.004  0.001     0.001 0.002
+1st Qu. 0.242      0.659   0.04   0.026     0      0.004  0.001     0.001 0.002
+Median  0.242      0.659   0.04   0.026     0      0.004  0.001     0.001 0.002
+Mean    0.242      0.659   0.04   0.026     0      0.004  0.001     0.001 0.002
+3rd Qu. 0.242      0.659   0.04   0.026     0      0.004  0.001     0.001 0.002
+Max.    0.242      0.659   0.04   0.026     0      0.004  0.001     0.001 0.002
+        Endothelial
+Min.          0.025
+1st Qu.       0.025
+Median        0.025
+Mean          0.025
+3rd Qu.       0.025
+Max.          0.025
+[1] "only one mixture sample. vst transformation is NOT feasible"
+Done optimization, elapsed time (min): 102.35849080880483
+export to:  /home/cke/PseudoBulk/Results/BLADE/fullpipeline_Jul29_noFS_pseudobulk__LOT17_noFS_BLADEout_noFS.pickle
+Done optimization, elapsed time (min): 104.05407476027807
+export to:  /home/cke/PseudoBulk/Results/BLADE/fullpipeline_Jul29_noFS_pseudobulk__LOT6_noFS_BLADEout_noFS.pickle
+Done optimization, elapsed time (min): 102.24598491986593
+export to:  /home/cke/PseudoBulk/Results/BLADE/fullpipeline_Jul29_noFS_pseudobulk__LOT20_noFS_BLADEout_noFS.pickle
+Done optimization, elapsed time (min): 100.84269150098164
+export to:  /home/cke/PseudoBulk/Results/BLADE/fullpipeline_Jul29_noFS_pseudobulk__LOT22_noFS_BLADEout_noFS.pickle
+Done optimization, elapsed time (min): 106.87769937117895
+export to:  /home/cke/PseudoBulk/Results/BLADE/fullpipeline_Jul29_noFS_pseudobulk__LOT25_noFS_BLADEout_noFS.pickle
+Done optimization, elapsed time (min): 90.98669928709666
+export to:  /home/cke/PseudoBulk/Results/BLADE/fullpipeline_Jul29_noFS_pseudobulk__LOT28_noFS_BLADEout_noFS.pickle
+Done optimization, elapsed time (min): 107.70374997059504
+export to:  /home/cke/PseudoBulk/Results/BLADE/fullpipeline_Jul29_noFS_pseudobulk__LOT26_noFS_BLADEout_noFS.pickle
+Done optimization, elapsed time (min): 122.52891540924708
+export to:  /home/cke/PseudoBulk/Results/BLADE/fullpipeline_Jul29_noFS_pseudobulk__LOT18_noFS_BLADEout_noFS.pickle
