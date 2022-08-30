@@ -1,0 +1,275 @@
+nohup: ignoring input
+Loading required package: snowfall
+Loading required package: snow
+Warning message:
+replacing previous import ‘gplots::lowess’ by ‘stats::lowess’ when loading ‘TED’ 
+Read 876 items
+Read 915 items
+Read 463 items
+Read 194 items
+[1] "Gene symbols detected. Cleaning up genes based on gene symbols. Recommend to use EMSEMBLE IDs for more unique mapping."
+A total of  33  genes from RB chrM chrX chrY  have been excluded 
+A total of  0  lowly expressed genes have been excluded 
+[1] "removing non-numeric genes..."
+[1] "removing outlier genes..."
+Number of outlier genes filtered= 8 
+[1] "aligning reference and mixture..."
+[1] "run first sampling"
+Start run... This may take a while 
+R Version:  R version 4.1.3 (2022-03-10) 
+
+snowfall 1.84-6.2 initialized (using snow 0.4-4): parallel execution on 10 CPUs.
+
+
+Stopping cluster
+
+[1] "merge subtypes"
+        Fibroblast tumor B cell myocyte       Endothelial T cell Dendritic
+Min.         0.076 0.306  0.000   0.000 0.000       0.002  0.000     0.000
+1st Qu.      0.248 0.417  0.003   0.000 0.001       0.004  0.000     0.000
+Median       0.351 0.485  0.009   0.000 0.009       0.010  0.003     0.004
+Mean         0.305 0.501  0.015   0.000 0.014       0.052  0.034     0.007
+3rd Qu.      0.408 0.569  0.021   0.000 0.022       0.058  0.038     0.011
+Max.         0.443 0.728  0.040   0.001 0.040       0.185  0.132     0.019
+         Mast Macrophage
+Min.    0.003      0.001
+1st Qu. 0.005      0.010
+Median  0.012      0.020
+Mean    0.044      0.027
+3rd Qu. 0.052      0.036
+Max.    0.151      0.067
+[1] "pooling information across samples"
+Start optimization... This may take a while 
+snowfall 1.84-6.2 initialized (using snow 0.4-4): parallel execution on 10 CPUs.
+
+
+Stopping cluster
+
+[1] "run final sampling"
+Start run... This may take a while 
+snowfall 1.84-6.2 initialized (using snow 0.4-4): parallel execution on 10 CPUs.
+
+
+Stopping cluster
+
+        tumor Fibroblast B cell myocyte       Endothelial T cell Dendritic
+Min.    0.321      0.062  0.000   0.000 0.000       0.000  0.000     0.000
+1st Qu. 0.432      0.235  0.002   0.000 0.000       0.002  0.000     0.000
+Median  0.501      0.332  0.008   0.000 0.009       0.009  0.002     0.004
+Mean    0.515      0.290  0.014   0.000 0.014       0.055  0.035     0.008
+3rd Qu. 0.583      0.387  0.021   0.000 0.023       0.062  0.037     0.012
+Max.    0.738      0.432  0.040   0.001 0.038       0.202  0.137     0.024
+         Mast Macrophage
+Min.    0.002      0.000
+1st Qu. 0.004      0.004
+Median  0.010      0.014
+Mean    0.046      0.023
+3rd Qu. 0.052      0.033
+Max.    0.160      0.065
+[1] "vst transformation is feasible"
+converting counts to integer mode
+Warning messages:
+1: In searchCommandline(parallel, cpus = cpus, type = type, socketHosts = socketHosts,  :
+  Unknown option on commandline: --file
+2: In searchCommandline(parallel, cpus = cpus, type = type, socketHosts = socketHosts,  :
+  Unknown option on commandline: --file
+3: In searchCommandline(parallel, cpus = cpus, type = type, socketHosts = socketHosts,  :
+  Unknown option on commandline: --file
+[1] "Gene symbols detected. Cleaning up genes based on gene symbols. Recommend to use EMSEMBLE IDs for more unique mapping."
+A total of  46  genes from RB chrM chrX chrY  have been excluded 
+A total of  0  lowly expressed genes have been excluded 
+[1] "removing non-numeric genes..."
+[1] "removing outlier genes..."
+Number of outlier genes filtered= 8 
+[1] "aligning reference and mixture..."
+[1] "run first sampling"
+Start run... This may take a while 
+snowfall 1.84-6.2 initialized (using snow 0.4-4): parallel execution on 10 CPUs.
+
+
+Stopping cluster
+
+[1] "merge subtypes"
+        Fibroblast tumor B cell myocyte       Endothelial T cell Dendritic
+Min.         0.070 0.328  0.000       0 0.000       0.002  0.000     0.000
+1st Qu.      0.174 0.441  0.003       0 0.018       0.006  0.000     0.000
+Median       0.283 0.574  0.012       0 0.024       0.008  0.001     0.000
+Mean         0.253 0.560  0.022       0 0.028       0.051  0.031     0.000
+3rd Qu.      0.362 0.694  0.031       0 0.035       0.053  0.031     0.000
+Max.         0.376 0.763  0.065       0 0.065       0.184  0.122     0.001
+         Mast Macrophage
+Min.    0.002      0.000
+1st Qu. 0.005      0.016
+Median  0.008      0.022
+Mean    0.026      0.028
+3rd Qu. 0.029      0.034
+Max.    0.087      0.071
+[1] "pooling information across samples"
+Start optimization... This may take a while 
+snowfall 1.84-6.2 initialized (using snow 0.4-4): parallel execution on 10 CPUs.
+
+
+Stopping cluster
+
+[1] "run final sampling"
+Start run... This may take a while 
+snowfall 1.84-6.2 initialized (using snow 0.4-4): parallel execution on 10 CPUs.
+
+
+Stopping cluster
+
+        tumor Fibroblast B cell myocyte       Endothelial T cell Dendritic
+Min.    0.346      0.063  0.000       0 0.000       0.000  0.000     0.000
+1st Qu. 0.476      0.153  0.002       0 0.001       0.003  0.000     0.000
+Median  0.609      0.251  0.009       0 0.011       0.005  0.000     0.000
+Mean    0.584      0.232  0.026       0 0.017       0.053  0.032     0.003
+3rd Qu. 0.718      0.331  0.033       0 0.027       0.055  0.032     0.003
+Max.    0.773      0.361  0.087       0 0.047       0.201  0.127     0.012
+         Mast Macrophage
+Min.    0.001      0.000
+1st Qu. 0.004      0.008
+Median  0.006      0.011
+Mean    0.029      0.023
+3rd Qu. 0.032      0.027
+Max.    0.105      0.071
+[1] "vst transformation is feasible"
+converting counts to integer mode
+Warning messages:
+1: In searchCommandline(parallel, cpus = cpus, type = type, socketHosts = socketHosts,  :
+  Unknown option on commandline: --file
+2: In searchCommandline(parallel, cpus = cpus, type = type, socketHosts = socketHosts,  :
+  Unknown option on commandline: --file
+3: In searchCommandline(parallel, cpus = cpus, type = type, socketHosts = socketHosts,  :
+  Unknown option on commandline: --file
+[1] "Gene symbols detected. Cleaning up genes based on gene symbols. Recommend to use EMSEMBLE IDs for more unique mapping."
+A total of  19  genes from RB chrM chrX chrY  have been excluded 
+A total of  0  lowly expressed genes have been excluded 
+[1] "removing non-numeric genes..."
+[1] "removing outlier genes..."
+Number of outlier genes filtered= 8 
+[1] "aligning reference and mixture..."
+[1] "run first sampling"
+Start run... This may take a while 
+snowfall 1.84-6.2 initialized (using snow 0.4-4): parallel execution on 10 CPUs.
+
+
+Stopping cluster
+
+[1] "merge subtypes"
+        Fibroblast tumor B cell myocyte       Endothelial T cell Dendritic
+Min.         0.077 0.346  0.000       0 0.000       0.002  0.000     0.000
+1st Qu.      0.209 0.485  0.004       0 0.003       0.005  0.000     0.000
+Median       0.301 0.578  0.010       0 0.014       0.008  0.001     0.000
+Mean         0.265 0.564  0.017       0 0.018       0.050  0.032     0.000
+3rd Qu.      0.357 0.657  0.024       0 0.029       0.052  0.033     0.000
+Max.         0.381 0.754  0.048       0 0.045       0.182  0.124     0.001
+         Mast Macrophage
+Min.    0.003      0.000
+1st Qu. 0.006      0.011
+Median  0.008      0.019
+Mean    0.029      0.025
+3rd Qu. 0.031      0.032
+Max.    0.096      0.063
+[1] "pooling information across samples"
+Start optimization... This may take a while 
+snowfall 1.84-6.2 initialized (using snow 0.4-4): parallel execution on 10 CPUs.
+
+
+Stopping cluster
+
+[1] "run final sampling"
+Start run... This may take a while 
+snowfall 1.84-6.2 initialized (using snow 0.4-4): parallel execution on 10 CPUs.
+
+
+Stopping cluster
+
+        tumor Fibroblast B cell myocyte       Endothelial T cell Dendritic
+Min.    0.355      0.065  0.000       0 0.000       0.000  0.000     0.000
+1st Qu. 0.503      0.183  0.003       0 0.000       0.004  0.000     0.000
+Median  0.601      0.271  0.008       0 0.012       0.006  0.001     0.000
+Mean    0.580      0.244  0.020       0 0.015       0.052  0.033     0.003
+3rd Qu. 0.678      0.332  0.026       0 0.026       0.054  0.033     0.003
+Max.    0.764      0.368  0.065       0 0.035       0.197  0.130     0.011
+         Mast Macrophage
+Min.    0.001      0.000
+1st Qu. 0.005      0.005
+Median  0.006      0.010
+Mean    0.033      0.021
+3rd Qu. 0.034      0.026
+Max.    0.117      0.062
+[1] "vst transformation is feasible"
+converting counts to integer mode
+Warning messages:
+1: In searchCommandline(parallel, cpus = cpus, type = type, socketHosts = socketHosts,  :
+  Unknown option on commandline: --file
+2: In searchCommandline(parallel, cpus = cpus, type = type, socketHosts = socketHosts,  :
+  Unknown option on commandline: --file
+3: In searchCommandline(parallel, cpus = cpus, type = type, socketHosts = socketHosts,  :
+  Unknown option on commandline: --file
+[1] "Gene symbols detected. Cleaning up genes based on gene symbols. Recommend to use EMSEMBLE IDs for more unique mapping."
+A total of  8  genes from RB chrM chrX chrY  have been excluded 
+A total of  0  lowly expressed genes have been excluded 
+[1] "removing non-numeric genes..."
+[1] "removing outlier genes..."
+Number of outlier genes filtered= 8 
+[1] "aligning reference and mixture..."
+[1] "run first sampling"
+Start run... This may take a while 
+snowfall 1.84-6.2 initialized (using snow 0.4-4): parallel execution on 10 CPUs.
+
+
+Stopping cluster
+
+[1] "merge subtypes"
+        Fibroblast tumor B cell myocyte       Endothelial T cell Dendritic
+Min.         0.091 0.296  0.000       0 0.000       0.003  0.000     0.000
+1st Qu.      0.208 0.398  0.005       0 0.005       0.004  0.000     0.000
+Median       0.355 0.521  0.008       0 0.006       0.009  0.001     0.000
+Mean         0.322 0.520  0.009       0 0.006       0.043  0.035     0.001
+3rd Qu.      0.470 0.644  0.012       0 0.007       0.048  0.036     0.001
+Max.         0.488 0.741  0.022       0 0.009       0.151  0.138     0.003
+         Mast Macrophage
+Min.    0.003      0.000
+1st Qu. 0.006      0.015
+Median  0.009      0.022
+Mean    0.033      0.031
+3rd Qu. 0.036      0.039
+Max.    0.109      0.080
+[1] "pooling information across samples"
+Start optimization... This may take a while 
+snowfall 1.84-6.2 initialized (using snow 0.4-4): parallel execution on 10 CPUs.
+
+
+Stopping cluster
+
+[1] "run final sampling"
+Start run... This may take a while 
+snowfall 1.84-6.2 initialized (using snow 0.4-4): parallel execution on 10 CPUs.
+
+
+Stopping cluster
+
+        tumor Fibroblast B cell myocyte       Endothelial T cell Dendritic
+Min.    0.298      0.086  0.000   0.000 0.000       0.001  0.000     0.000
+1st Qu. 0.424      0.194  0.003   0.000 0.002       0.004  0.000     0.000
+Median  0.550      0.332  0.006   0.000 0.002       0.007  0.001     0.000
+Mean    0.537      0.308  0.008   0.000 0.003       0.044  0.035     0.002
+3rd Qu. 0.662      0.446  0.012   0.000 0.004       0.046  0.036     0.002
+Max.    0.751      0.483  0.020   0.001 0.008       0.160  0.139     0.007
+         Mast Macrophage
+Min.    0.002      0.000
+1st Qu. 0.006      0.005
+Median  0.008      0.015
+Mean    0.034      0.028
+3rd Qu. 0.036      0.037
+Max.    0.120      0.082
+[1] "vst transformation is feasible"
+converting counts to integer mode
+Warning messages:
+1: In searchCommandline(parallel, cpus = cpus, type = type, socketHosts = socketHosts,  :
+  Unknown option on commandline: --file
+2: In searchCommandline(parallel, cpus = cpus, type = type, socketHosts = socketHosts,  :
+  Unknown option on commandline: --file
+3: In searchCommandline(parallel, cpus = cpus, type = type, socketHosts = socketHosts,  :
+  Unknown option on commandline: --file

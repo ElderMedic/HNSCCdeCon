@@ -53,57 +53,81 @@ import logging
 # In[17]:
 
 
+# hyperpars = {
+#     'Alpha': [1, 10],
+#     'Alpha0': [0.1, 0.5, 1, 5, 10],
+#     'Kappa0': [1, 0.5, 0.1],
+#     'SY': np.sqrt([0.1, 0.5, 1, 1.5, 2])
+# }
+
 hyperpars = {
     'Alpha': [1, 10],
-    'Alpha0': [0.1, 0.5, 1, 5, 10],
+    'Alpha0': [0.1, 1, 5],
     'Kappa0': [1, 0.5, 0.1],
-    'SY': np.sqrt([0.1, 0.5, 1, 1.5, 2])
+    'SY': [1,0.3,0.5],
 }
+
 
 Nrep=3
 Nrepfinal=10
-Njob=20
+Njob=15
 
 
 # In[10]:
 
-# read in marker genes, only top DEGs
-marker_genes = pd.read_csv("/home/cke/Puram/top100DEGs_symbol_scanpy_harmony.txt",header=None).iloc[0,:]
+df_Puram_std = pd.read_csv("/home/cke/Puram/HNSCC2PuramGSE103322_qc_std_pseudotrain.tsv",sep='\t',index_col=0)
+df_Puram_mean = pd.read_csv("/home/cke/Puram/HNSCC2PuramGSE103322_qc_mean_pseudotrain.tsv",sep='\t',index_col=0)
+df_pseudo = pd.read_csv("/home/cke/Puram/Puram_pseudobulk_fromraw_test.tsv",sep='\t',index_col=0).T
 
-# df_Puram_std = pd.read_csv("/home/cke/Puram/HNSCC2PuramGSE103322_HNSCC_exp_std.tsv",sep='\t',index_col=0)
-# df_Puram_mean = pd.read_csv("/home/cke/Puram/HNSCC2PuramGSE103322_HNSCC_exp_mean.tsv",sep='\t',index_col=0)
+marker_genes_100DEGs = pd.read_csv("/home/cke/Puram/top100DEGs_pseudobulk.txt",header=None).iloc[0,:]
+marker_genes_100 = pd.read_csv("/home/cke/Puram/top100markers_de_cor_symbol.txt",header=None).iloc[0,:]
+marker_genes_50 = pd.read_csv("/home/cke/Puram/top50markers_de_cor_symbol.txt",header=None).iloc[0,:]
+marker_genes_20 = pd.read_csv("/home/cke/Puram/top20markers_de_cor_symbol.txt",header=None).iloc[0,:]
 
-# merged all tumor cell types
-df_Puram_std = pd.read_csv("/home/cke/Puram/HNSCC2PuramGSE103322_harmony_qc_dr_std.tsv",sep='\t',index_col=0)
-df_Puram_mean = pd.read_csv("/home/cke/Puram/HNSCC2PuramGSE103322_harmony_qc_dr_mean.tsv",sep='\t',index_col=0)
+def run_BLADE(marker_genes, df_Puram_std, df_Puram_mean, df_pseudo):
+    marker_genes = marker_genes.drop_duplicates()
+    df_Puram_std_filtered = df_Puram_std.loc[marker_genes,:]
+    df_Puram_mean_filtered = df_Puram_mean.loc[marker_genes,:]
 
-df_Puram_std_filtered = df_Puram_std.loc[marker_genes,:]
-df_Puram_mean_filtered = df_Puram_mean.loc[marker_genes,:]
+    merge_genes_mean = pd.merge(df_Puram_mean_filtered,df_pseudo,left_index=True,right_index=True,how='inner')
+    merge_genes_std = pd.merge(df_Puram_std_filtered,df_pseudo,left_index=True,right_index=True,how='inner')
 
-df_pseudo = pd.read_csv("/home/cke/Puram/Puram_pseudobulk_fromraw.tsv",sep='\t',index_col=0)
-df_pseudo = df_pseudo.T
-df_Puram_mean_log2 = np.log2(df_Puram_mean_filtered+1)
+    print("Get mean and std exp!")
 
-merge_genes_mean = pd.merge(df_Puram_mean_log2,df_pseudo,left_index=True,right_index=True,how='inner')
-merge_genes_std = pd.merge(df_Puram_std_filtered,df_pseudo,left_index=True,right_index=True,how='inner')
+    #simple tumor cell type setup, there are 10 annotated cell types
+    df_TCGA_shared = merge_genes_mean.iloc[:,10:]
+    df_shared_mean = merge_genes_mean.iloc[:,:10]
+    df_shared_std = merge_genes_std.iloc[:,:10]
 
-print("Get mean and std exp!")
+    print("Get common genes! ",df_shared_mean.shape[0])
+    print("cell types: ",df_shared_mean.shape[1])
+    print("bulk samples: ",df_TCGA_shared.shape[1])
+    return df_TCGA_shared, df_shared_mean, df_shared_std
 
-# 21706 genes in common
-# df_TCGA_shared = merge_genes_mean.iloc[:,24:]
-# df_shared_mean = merge_genes_mean.iloc[:,:24]
-# df_shared_std = merge_genes_std.iloc[:,:24]
+list_markers = [marker_genes_100DEGs,marker_genes_100,marker_genes_50,marker_genes_20]
+list_num = ['100DEGs','100','50','20']
 
-#simple tumor cell type setup, there are 10 annotated cell types
-df_TCGA_shared = merge_genes_mean.iloc[:,10:]
-df_shared_mean = merge_genes_mean.iloc[:,:10]
-df_shared_std = merge_genes_std.iloc[:,:10]
-
-print("Get common genes! ",df_shared_mean.shape[0])
-print("cell types: ",df_shared_mean.shape[1])
-print("bulk samples: ",df_TCGA_shared.shape[1])
-
-
+for i in range(len(list_markers)):
+    df_TCGA_shared, df_shared_mean, df_shared_std = run_BLADE(list_markers[i], df_Puram_std, df_Puram_mean, df_pseudo)
+    print("start BLADE!")
+    Y = df_TCGA_shared.to_numpy()
+    mean = df_shared_mean.to_numpy() 
+    sd = df_shared_std.to_numpy() 
+    outfile = '/home/cke/BLADE/data/Puramfiltered_pseudobulk_BLADEout_'+list_num[i]+'.pickle'
+    final_obj, best_obj, best_set, outs = Framework(
+        mean, sd, Y,
+        Alphas=hyperpars['Alpha'], Alpha0s=hyperpars['Alpha0'], 
+        Kappa0s=hyperpars['Kappa0'], SYs=hyperpars['SY'],
+        Nrep=Nrep, Njob=Njob, Nrepfinal=Nrepfinal)
+    pickle.dump(
+        {
+            'final_obj': final_obj,
+            'best_obj': best_obj,
+            'best_set': best_set,
+            'outs' : outs
+        }, open(outfile, 'wb')
+        )
+    
 # Given the configuration above, BLADE is applied to each of the simulation dataset created previously.  
 # 
 # BLADE produce several outcomes:
@@ -111,44 +135,6 @@ print("bulk samples: ",df_TCGA_shared.shape[1])
 # - `best_obj`: BLADE object trained with the best parameter set found by the Empirical Bayes framework. Empirical Bayes framework is applied after selecting a subset of samples (5 samples; indicated by `Ind_sample` below), and thus the outcome contains only 5 samples. If `Nsample` <= 5, `final_obj` is identical to `best_obj`.
 # - `best_set`: Best parameter set defined by Empirical Bayes framework.
 # - `outs`: Outcome of BLADE for every possible combination of hyperparameters, used in the Empirical Bayes framework. 
-# 
-
-# - There are nan in mean and std matrix! NAs are filled with 0?
-# 
-# full tumor type setup:
-# - ngenes = 21706 common genes
-# - ncells = 24, including all 16 tumor types
-# - nsample = 546
-# 
-# simple tumor type setup:
-#- ngenes = 21706 common genes
-#- ncells = 10, all tumor types are merged, including one NA type?
-#- nsample = 546
-# - marker genes = 900 (including 9 genes not shared)
-
-print("start BLADE!")
-Y = df_TCGA_shared.to_numpy()
-mean = df_shared_mean.to_numpy() 
-sd = df_shared_std.to_numpy() 
-
-outfile = './BLADE/data/Puramfiltered_pseudobulk_BLADEout.pickle'
-
-final_obj, best_obj, best_set, outs = Framework(
-    mean, sd, Y,
-    Alphas=hyperpars['Alpha'], Alpha0s=hyperpars['Alpha0'], 
-    Kappa0s=hyperpars['Kappa0'], SYs=hyperpars['SY'],
-    Nrep=Nrep, Njob=Njob, Nrepfinal=Nrepfinal)
-
-pickle.dump(
-    {
-        'final_obj': final_obj,
-        'best_obj': best_obj,
-        'best_set': best_set,
-        'outs' : outs
-    }, open(outfile, 'wb')
-    )
-
-# In[ ]:
 
 
 

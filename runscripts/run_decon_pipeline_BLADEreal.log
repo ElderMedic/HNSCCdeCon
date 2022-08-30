@@ -1,24 +1,67 @@
-scanpy==1.9.1 anndata==0.8.0 umap==0.5.3 numpy==1.21.5 scipy==1.8.0 pandas==1.4.2 scikit-learn==1.0.2 statsmodels==0.13.2 python-igraph==0.9.9 louvain==0.7.1 pynndescent==0.5.7
-BLADEreal_Jul29  - pipeline initiated! Welcome, contact author for support: kechanglin1998@hotmail.com
-2022-07-29 14:41:01
-running Feature selection!
-real mode: now with feature selection setup:  top100markers
-2022-07-29 14:42:49
-real mode: now with feature selection setup:  top20markers
-2022-07-29 14:43:19
-real mode: now with feature selection setup:  top100DEGs
-2022-07-29 14:43:49
-real mode: now with feature selection setup:  top50markers
-2022-07-29 14:44:19
-now running in cmd:  python /home/cke/runscripts/runBLADE.py /home/cke/Real/InputToWrapper/real_std.tsv /home/cke/Real/InputToWrapper/real_mean.tsv /home/cke/TCGA-HNSC.htseq_counts_exp2_symbol_samplexgene.tsv /home/cke/Real/TCGAResults/BLADE/ --folder_marker /home/cke/Puram/markers/ --name BLADEreal_Jul29_real &
-job finished! details of arguments used in this run:  Namespace(path_adata='/home/cke/Puram/Puram_scanpy.h5ad', mode='real', out='/home/cke/Real/InputToWrapper/', out_res='/home/cke/Real/TCGAResults/', path_label='/home/cke/Puram/scRNAlabels/', path_bulk='/home/cke/TCGA-HNSC.htseq_counts_exp2_symbol_samplexgene.tsv', folder_marker='/home/cke/Puram/markers/', name='BLADEreal_Jul29', methods='[BLADE]', keyword=['top', 'marker', 'DEG'])
-now with feature selection setup:  top100markers
+scanpy==1.9.1 anndata==0.8.0 umap==0.5.3 numpy==1.21.5 scipy==1.8.0 pandas==1.4.3 scikit-learn==1.0.2 statsmodels==0.13.2 python-igraph==0.9.9 louvain==0.7.1 pynndescent==0.5.7
+fullpipeline_Aug1_noFS  - pipeline initiated! Welcome, contact author for support: kechanglin1998@hotmail.com
+2022-08-01 15:36:25
+no Feature selection!
+real mode: no feature selection
+2022-08-01 15:37:44
+now running in cmd:  Rscript /home/cke/runscripts/runMuSiC.r /home/cke/Real/InputToWrapper/real_scRNAref.tsv /home/cke/TCGA-HNSC.htseq_counts_exp2_symbol_samplexgene.tsv /home/cke/Puram/scRNAlabels/ noFS fullpipeline_Aug1_noFS_real_noFS /home/cke/Real/TCGAResults/MuSiC/ &
+now running in cmd:  Rscript /home/cke/runscripts/runBP.r /home/cke/Real/InputToWrapper/real_scRNAref.tsv /home/cke/TCGA-HNSC.htseq_counts_exp2_symbol_samplexgene.tsv /home/cke/Puram/scRNAlabels/ noFS fullpipeline_Aug1_noFS_real_noFS /home/cke/Real/TCGAResults/BayesPrism/ /home/cke/Real/TCGAResults/ &
+now running in cmd:  python /home/cke/runscripts/runBLADE.py /home/cke/Real/InputToWrapper/real_std.tsv /home/cke/Real/InputToWrapper/real_mean.tsv /home/cke/TCGA-HNSC.htseq_counts_exp2_symbol_samplexgene.tsv /home/cke/Real/TCGAResults/BLADE/ --name fullpipeline_Aug1_noFS_real_noFS &
+job finished! details of arguments used in this run:  Namespace(path_adata='/home/cke/Puram/Puram_scanpy.h5ad', mode='real', out='/home/cke/Real/InputToWrapper/', out_res='/home/cke/Real/TCGAResults/', path_label='/home/cke/Puram/scRNAlabels/', path_bulk='/home/cke/TCGA-HNSC.htseq_counts_exp2_symbol_samplexgene.tsv', folder_marker=False, name='fullpipeline_Aug1_noFS', methods=['MuSiC', 'BP', 'BLADE'], keyword=['top', 'marker', 'DEG'])
+[1] "running BayesPrism with following args:"
+[1] "/home/cke/Real/InputToWrapper/real_scRNAref.tsv"             
+[2] "/home/cke/TCGA-HNSC.htseq_counts_exp2_symbol_samplexgene.tsv"
+[3] "/home/cke/Puram/scRNAlabels/"                                
+[4] "noFS"                                                        
+[5] "fullpipeline_Aug1_noFS_real_noFS"                            
+[6] "/home/cke/Real/TCGAResults/MuSiC/"                           
+[7] "/home/cke/Puram/scRNAlabels/"                                
+[1] "running BayesPrism with following args:"
+[1] "/home/cke/Real/InputToWrapper/real_scRNAref.tsv"             
+[2] "/home/cke/TCGA-HNSC.htseq_counts_exp2_symbol_samplexgene.tsv"
+[3] "/home/cke/Puram/scRNAlabels/"                                
+[4] "noFS"                                                        
+[5] "fullpipeline_Aug1_noFS_real_noFS"                            
+[6] "/home/cke/Real/TCGAResults/BayesPrism/"                      
+[7] "/home/cke/Real/TCGAResults/"                                 
+[8] "/home/cke/Puram/scRNAlabels/"                                
+no feature selection on BLADE, be advised: You might be waiting for the end of the world!
 Get mean and std exp!
-Get common genes!  830
+Get common genes!  18352
 cell types:  10
 bulk samples:  546
 start BLADE!
-all of 830 genes are used for optimization.
+all of 18352 genes are used for optimization.
 All samples are used during the optimization.
 Initialization with Support vector regression
+[1] "Gene symbols detected. Cleaning up genes based on gene symbols. Recommend to use EMSEMBLE IDs for more unique mapping."
+A total of  1036  genes from RB chrM chrX chrY  have been excluded 
+A total of  645  lowly expressed genes have been excluded 
+[1] "removing non-numeric genes..."
+[1] "removing outlier genes..."
+Number of outlier genes filtered= 7 
+[1] "aligning reference and mixture..."
+[1] "run first sampling"
+Start run... This may take a while 
+R Version:  R version 4.1.3 (2022-03-10) 
+
+[1] "merge subtypes"
+        Fibroblast tumor B cell myocyte other Macrophage Endothelial T cell
+Min.         0.000 0.000  0.000   0.000 0.000      0.000       0.001  0.000
+1st Qu.      0.031 0.615  0.000   0.000 0.000      0.004       0.037  0.009
+Median       0.077 0.739  0.000   0.001 0.007      0.011       0.062  0.017
+Mean         0.110 0.706  0.000   0.021 0.051      0.020       0.064  0.026
+3rd Qu.      0.152 0.833  0.000   0.009 0.061      0.028       0.086  0.035
+Max.         0.809 0.986  0.015   0.712 0.804      0.184       0.184  0.174
+        Dendritic  Mast
+Min.        0.000 0.000
+1st Qu.     0.000 0.000
+Median      0.000 0.000
+Mean        0.000 0.000
+3rd Qu.     0.000 0.000
+Max.        0.012 0.005
+[1] "pooling information across samples"
+Start optimization... This may take a while 
+[1] "run final sampling"
+Start run... This may take a while 
 No feature filtering is done (fsel = 0)
