@@ -75,6 +75,7 @@ Alternative arguments:
 - '--keyword', help='keyword in marker file name to identify them',default=["top","marker","DEG"]
 
 ## Important inputs
+## YOU CAN REVIEW ALL RESULTS FOR THESIS AND DEMONSTRATIONS IN NOTEBOOKS ALREADY, IF NO MODIFICATION OR RERUN OF CELLS ARE CONDUCTED! 
 
 scRNA-seq data: 
 
