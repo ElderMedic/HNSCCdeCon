@@ -1,5 +1,10 @@
 # HNSCCdeCon
 Single-cell deconvolution of bulk RNA sequencing data from head and neck cancers
+### Abstract
+
+Head and neck squamous cell carcinomas (HNSCCs) are remarkably aggressive and heterogenous tumors that arise in the mucosal lining of the upper aerodigestive tract. HNSCCs can be classified into clinical subclasses by anatomical sites, HPV infection, and copy number alteration. There are major clinical and genetic differences between HNSCC subclasses. Intricate tumor microenvironment (TME) composition plays a crucial role in the disease progression and outcome. Recently, advances in single-cell RNA sequencing (scRNA-seq) have allowed for the estimation of the cellular composition of the TME exploiting the wealth of bulk RNA-seq cohort. Here we present optimized bulk TME characterization of HNSCC subclasses with single-cell signature as reference. By benchmarking various deconvolution methods with feature selection on real and artificial bulk data, we find tailored computational deconvolution setups for HNSCC data. Furthermore, we investigated and devised sensible scRNA-seq data integration procedures to impute immune cell subtypes. In the end, we identify statistically significant differential TME patterns between immune and stromal cells across HNSCC subclasses and patient survival. Through this study, we present a generalizable comprehensive pipeline to characterize etiological factors based on HNSCC TME. We anticipate our findings to improve HNSCC prognostication and lead to clinical insight on therapy response and potential vulnerabilities. 
+
+#### Keywords: HNSCC, scRNA-seq, deconvolution, compositional data analysis, TME
 
 ## Requirements
 Python3 latest ver.:
