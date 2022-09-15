@@ -15,10 +15,15 @@ Project files location: /home/cke/ in apollo
 (download of data/results is ongoing to M:\DATA tumorbiologie\Shared\MEDEWERKERS\Changlin (student)\ServerData)
 
 ## How to connect from VIEW to Zeus/apollo? and activate jupyter notebook.
-ssh -L 8991:localhost:8892 cke@zeus
-ssh -L 8892:localhost:8891 -p22010 cke@localhost 
+ssh -L PORT1:localhost:PORT2 cke@zeus
+
+ssh -L PORT2:localhost:PORT3 -p22010 cke@localhost 
+
 conda activate BLADE
-jupyter notebook --port 8891 --no-browser &
+
+jupyter notebook --port PORT3 --no-browser &
+
+>PORT1: for access on your own device, PORT2: can be arbitrary port for tunneling only on jump host, PORT3: the port you select for jupyter on remote server, plz set a fixed port to avoid network disturbance!
 
 ## File structure
 Essential components:
