@@ -7,8 +7,8 @@ Head and neck squamous cell carcinomas (HNSCCs) are remarkably aggressive and he
 #### Keywords: HNSCC, scRNA-seq, deconvolution, compositional data analysis, TME
 
 ## Requirements
-Python3 latest ver.:
-Pandas, numpy, scipy, matplotlib, seaborn, anndata, scanpy, scikit-learn, scikit-survival, tqdm, cycler, imblearn, scikit-bio, sccoda, statsmodels
+Python3 latest ver.: (full anacoanda3 is recommended!)
+Pandas, numpy, scipy, matplotlib, seaborn, anndata, scanpy, scikit-learn, scikit-survival, tqdm, cycler, imblearn, scikit-bio, sccoda, statsmodels, jupyter(lab)
 R >4.0, installation using anaconda is preferred
 
 Project files location: /home/cke/ in apollo
